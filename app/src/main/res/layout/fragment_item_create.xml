@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg1"
+    android:padding="@dimen/activity_element_spacing2">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/back_icon"
+        android:backgroundTint="@color/back_button"
+        android:contentDescription="@string/character_selection_back_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/createItemTitle"
+        style="@style/GeneralTitle"
+        android:text="@string/create_item_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/createItemSearch"
+        style="@style/GeneralEditTextField"
+        android:layout_marginTop="@dimen/activity_element_spacing1"
+        android:width="0dp"
+        app:layout_constraintWidth_max="320dp"
+        app:layout_constraintWidth_percent="0.8"
+        android:hint="@string/create_item_search_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createItemTitle" />
+
+    <EditText
+        android:id="@+id/createItemName"
+        style="@style/GeneralEditTextField"
+        android:layout_marginTop="@dimen/activity_element_spacing2"
+        android:width="0dp"
+        app:layout_constraintWidth_max="320dp"
+        app:layout_constraintWidth_percent="0.8"
+        android:hint="@string/create_item_name_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createItemSearch" />
+
+    <EditText
+        android:id="@+id/createItemWeight"
+        style="@style/GeneralEditTextField"
+        android:layout_marginTop="@dimen/activity_element_spacing2"
+        android:width="0dp"
+        app:layout_constraintWidth_max="320dp"
+        app:layout_constraintWidth_percent="0.8"
+        android:inputType="numberDecimal"
+        android:hint="@string/create_item_weight_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createItemName" />
+
+    <EditText
+        android:id="@+id/createItemDescription"
+        style="@style/GeneralEditTextField"
+        android:layout_marginTop="@dimen/activity_element_spacing2"
+        android:width="0dp"
+        app:layout_constraintWidth_max="320dp"
+        app:layout_constraintWidth_percent="0.8"
+        android:hint="@string/create_item_description_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createItemWeight" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonCreateItem"
+        style="@style/GeneralButton"
+        android:layout_marginTop="@dimen/activity_element_spacing2"
+        android:width="0dp"
+        app:layout_constraintWidth_max="320dp"
+        app:layout_constraintWidth_percent="0.8"
+        android:text="@string/create_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createItemDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

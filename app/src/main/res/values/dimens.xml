@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Text -->
+    <dimen name="title_text">30sp</dimen>
+    <dimen name="text">20sp</dimen>
+    <dimen name="menu_text">18sp</dimen>
+    <dimen name="small_text">16sp</dimen>
+
+    <!-- UI elements-->
+    <dimen name="activity_element_spacing1">64dp</dimen>
+    <dimen name="activity_element_spacing2">16dp</dimen>
+    <dimen name="activity_element_spacing_land">8dp</dimen>
+    <dimen name="inventory_item_element_spacing">8dp</dimen>
+    <dimen name="inventory_item_stepper_spacing">4dp</dimen>
+    <dimen name="recycler_item_spacing">8dp</dimen>
+</resources>

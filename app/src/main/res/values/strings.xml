@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">RPG-Inventory-App</string>
+
+
+    <!-- 1. Start Activity -->
+    <string name="dungeon_master">Host</string>
+    <string name="player">Player</string>
+    <string name="about">About</string>
+
+
+    <!-- 1.1 About Activity -->
+    <string name="about_text">
+        Developer: Erik Strinnholm
+        \nLast Updated: 6/3–2026
+        \n
+        \nUser Instructions:
+        \n
+        \nCharacter Selection:
+        \nhere you can create/load a character by selecting one of the save slots. Clicking the Delete Button enable/disables delete mode.
+        \n
+        \nCreate Character:
+        \n You are required to fill in a character name, strength score (determines how much you can carry), speed and name of the campaign (optional)
+        \n
+        \nCharacter Overview:
+        \n Here you can see your character information, by clicking the bag you can open your inventory
+        \n
+        \nCharacter Inventory:
+        \n Here you can see the items you are carrying, you can search among items, create a new item (+button), you can sort your items by quantity, name or weight by clicking the header buttons.
+        by doing a long click on an item you enter select mode, where you select a number of items by quantity with the (-button)/(+button), you can select all items or clear your selection with the bottom bar buttons. And when you are ready you can either exit select mode or delete the selected Items.
+        \n
+        \nCreate Item:
+        \n You are required to fill in information for an item (Name, Weight and a Description)
+        \n
+        \n App Version 1.0 </string>
+
+
+    <!-- 1. Character Selection -->
+    <string name="character_selection_title">Select Character</string>
+    <string name="character_selection_new">New Character</string>
+    <string name="character_selection_delete_description">Deletes a character</string>
+    <string name="character_selection_back_description">Goes back to previous screen</string>
+
+
+    <!-- 2. Character Creation -->
+    <string name="character_create_title">Create Character</string>
+    <string name="character_create_name_hint">Character Name</string>
+    <string name="character_create_button">Create</string>
+    <string name="character_create_strength_hint">Character Strength Score</string>
+    <string name="character_create_campaign_hint">Name of Campaign (optional)</string>
+
+
+    <!-- 3. Character Overview -->
+    <!-- 3.1 General -->
+    <string name="character_overview_name">Name:</string>
+    <string name="character_overview_name_temp">Character Name</string>
+    <string name="character_overview_strength">Strength Score:</string>
+    <string name="character_overview_strength_temp">10</string>
+    <string name="character_overview_speed">Base Speed:</string>
+    <string name="character_overview_speed_temp">30</string>
+    <!-- 3.2 Coinage -->
+    <string name="character_overview_coin_bag">Coin Pouch</string>
+    <string name="character_overview_coins_weight_temp">(10 lb)</string>
+    <string name="coin_temp_value">50</string>
+    <string name="coin_copper_description">Copper Coin</string>
+    <string name="coin_silver_description">Silver Coin</string>
+    <string name="coin_gold_description">Gold Coin</string>
+    <string name="coin_platinum_description">Platinum Coin</string>
+    <string name="coin_copper">Copper:</string>
+    <string name="coin_silver">Silver:</string>
+    <string name="coin_gold">Gold:</string>
+    <string name="coin_platinum">Platinum:</string>
+    <!-- 3.3 Inventory -->
+    <string name="character_overview_backpack">Backpack (press to open)</string>
+    <string name="character_overview_backpack_weight_temp">(20 lb)</string>
+    <string name="character_overview_open_inventory">Open Inventory</string>
+    <!-- 3.4 Carrying Capacity -->
+    <string name="character_overview_carrying_capacity">Carrying Capacity</string>
+    <string name="character_overview_total_weight">Total Weight:</string>
+    <string name="character_overview_total_weight_temp">0</string>
+    <string name="character_overview_limit1">Limit 1 (str x 5):</string>
+    <string name="character_overview_limit2">Limit 2 (str x 10):</string>
+    <string name="character_overview_limit3">Limit 3 (str x 15):</string>
+    <string name="character_overview_limit_temp_weight">10 lb</string>
+
+
+    <!-- 4. Character Inventory -->
+    <!-- 4.1 Menu Items -->
+    <string name="menu_exit">Exit</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_new_item">New Item</string>
+    <string name="menu_sort">Sort</string>
+    <string name="menu_connect">Connect</string>
+    <string name="menu_about">About</string>
+    <!-- 4.2 Header -->
+    <string name="button_quantity">Qty.</string>
+    <string name="button_name">Name</string>
+    <string name="button_total_weight">Wgt.</string>
+    <!-- 4.3 Inventory Items -->
+    <string name="quantity_placeholder">2x</string>
+    <string name="name_placeholder">Name</string>
+    <string name="weight_placeholder">2 lb</string>
+    <string name="stepper_decrement">-</string>
+    <string name="stepper_text">2/2</string>
+    <string name="stepper_increment">+</string>
+    <!-- 4.4 Bottom Bar -->
+    <string name="button_exit_select">EXIT</string>
+    <string name="button_clear_select">CLEAR</string>
+    <string name="button_select_all">SELECT ALL</string>
+    <string name="button_send">SEND</string>
+    <string name="button_delete">DELETE</string>
+
+
+    <!-- 5. Create Item -->
+    <string name="create_item_title">Create Item</string>
+    <string name="create_item">Create Item</string>
+    <string name="create_item_search_hint">Search</string>
+    <string name="create_item_name_hint">Item Name</string>
+    <string name="create_item_weight_hint">Item Weight</string>
+    <string name="create_item_description_hint">Item Description</string>
+
+
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="rpg_background_color">#FFF</color>
+    <color name="rpg_top_bar_color">#5B3A29</color>
+
+
+
+    <color name="bar_color">#B16C1A</color>
+    <color name="background_color">#FBFAAF</color>
+    <color name="black">#000000</color>
+
+
+    <!-- Button Colors -->
+    <color name="brown_dark">#5B3A29</color>
+    <color name="brown_bright">#8B4513</color>
+    <color name="gold">#FFD700</color>
+
+
+
+    <color name="white">#FFF</color>
+
+    <!-- MENU -->
+    <color name="menu_item_text">#FFF</color>
+
+
+    <!-- Inventory -->
+
+
+
+    <color name="inventory_stepper_text_default">#979797</color>
+    <color name="inventory_stepper_text_selected">#21CA05</color>
+
+
+    <color name="inventory_bottom_background">#5A3A29</color>
+
+
+
+    <!-- Colors -->
+    <color name="TextColor">#FFF</color>
+    <color name="CoinText">#FFFFFF</color>
+
+    <color name="Header">#141414</color>
+
+
+
+
+
+    <!-- General Styles-->
+    <color name="main_theme_color">#5A3A29</color>
+    <color name="app_background">#FFFFFF</color>
+    <color name="button_color">#5A3A29</color>
+    <color name="button_text_color">@color/TextColor</color>
+    <color name="edit_text_background">#5A3A29</color>
+    <color name="edit_text_color">@color/TextColor</color>
+    <color name="title_color">@color/black</color>
+    <color name="text_color">@color/TextColor</color>
+    <color name="text_color_highlight">#80DD80</color>
+    <color name="text_background">#5A3A29</color>
+    <color name="back_button">@color/black</color>
+
+    <!-- 1. Character Selection -->
+    <color name="character_selection_button">@color/button_color</color>
+    <color name="character_selection_button_text">@color/button_text_color</color>
+    <color name="character_selection_delete">#5A3A29</color>
+
+    <!-- 2. Character Creation -->
+    <color name="character_create_button">@color/button_color</color>
+    <color name="character_create_button_text">@color/button_text_color</color>
+
+
+    <!-- 2. Player Inventory Activity -->
+    <!-- 2.1 Menu -->
+    <!-- 2.2 Header -->
+    <color name="inventory_header_background">#5A3A29</color>
+    <color name="inventory_header_text">#FFF</color>
+    <color name="inventory_header_button_background">#574848</color>
+    <!-- 2.3 Inventory -->
+    <color name="inventory_item_background">#5A3A29</color>
+    <color name="inventory_item_border">#21CA05</color>
+    <color name="inventory_item_quantity">#FFF</color>
+    <color name="inventory_item_name">#FFF</color>
+    <color name="inventory_item_weight">#9F9F9F</color>
+    <color name="inventory_stepper_decrement">#574848</color>
+    <color name="inventory_stepper_text">#FFF</color>
+    <color name="inventory_stepper_increment">#504242</color>
+    <color name="inventory_stepper_sign">#000000</color>
+
+    <!-- 1.4 Bottom Bar -->
+
+
+
+
+
+</resources>

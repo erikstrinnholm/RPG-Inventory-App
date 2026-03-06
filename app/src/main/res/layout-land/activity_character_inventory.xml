@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2land">
+
+    <!-- TopBar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/rpg_top_bar_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/rpg_top_bar_color"
+            android:elevation="4dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextAppearance="@style/CustomMenuTextStyle"
+            app:title="" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!-- Add Header Here -->
+    <LinearLayout
+        android:id="@+id/inventoryHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/inventory_header_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/inventoryHeaderQuantity"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@color/inventory_header_button_background"
+            android:text="@string/button_quantity"
+            android:textColor="@color/inventory_header_text"
+            android:textSize="@dimen/small_text" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/inventoryHeaderName"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="4"
+            android:background="@color/inventory_header_button_background"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/inventory_item_element_spacing"
+            android:text="@string/button_name"
+            android:textColor="@color/inventory_header_text"
+            android:textSize="@dimen/small_text" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/inventoryHeaderTotalWeight"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@color/inventory_header_button_background"
+            android:text="@string/button_total_weight"
+            android:textColor="@color/inventory_header_text"
+            android:textSize="@dimen/small_text" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/inventoryHeaderFiller"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="4"
+            android:background="@color/inventory_header_button_background"
+            android:enabled="false"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- RecyclerView for the ScrollList -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/itemListRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:background="@android:color/transparent"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/inventoryFooterLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inventoryHeader"
+        tools:listitem="@layout/inventory_item" />
+
+
+
+
+    <!-- BottomBar (After selecting items, hold item button) -->
+    <LinearLayout
+        android:id="@+id/inventoryFooterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Coin Tracker (Clickable) -->
+        <TableLayout
+            android:id="@+id/inventoryFooter1Coins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_theme_color"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <!-- Copper -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/coin_copper"
+                    android:textColor="@color/CoinText"
+                    android:textSize="@dimen/small_text" />
+
+                <TextView
+                    android:id="@+id/characterInventoryCopperCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/coin_temp_value"
+                    android:textColor="@color/text_color_highlight"
+                    android:textSize="@dimen/small_text" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/coin_copper_description"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/coin_copper_icon" />
+
+                <!-- Silver -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/coin_silver"
+                    android:textColor="@color/CoinText"
+                    android:textSize="@dimen/small_text" />
+
+                <TextView
+                    android:id="@+id/characterInventorySilverCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/coin_temp_value"
+                    android:textColor="@color/text_color_highlight"
+                    android:textSize="@dimen/small_text" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/coin_silver_description"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/coin_silver_icon" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <!-- Gold -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/coin_gold"
+                    android:textColor="@color/CoinText"
+                    android:textSize="@dimen/small_text" />
+
+                <TextView
+                    android:id="@+id/characterInventoryGoldCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/coin_temp_value"
+                    android:textColor="@color/text_color_highlight"
+                    android:textSize="@dimen/small_text" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/coin_gold_description"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/coin_gold_icon" />
+
+                <!-- Platinum -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/coin_platinum"
+                    android:textColor="@color/CoinText"
+                    android:textSize="@dimen/small_text" />
+
+                <TextView
+                    android:id="@+id/characterInventoryPlatinumCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/coin_temp_value"
+                    android:textColor="@color/text_color_highlight"
+                    android:textSize="@dimen/small_text" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/coin_platinum_description"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/coin_platinum_icon" />
+            </TableRow>
+        </TableLayout>
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:id="@+id/inventoryFooter2Select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_theme_color"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonSelectExit"
+                style="@style/GeneralButton"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_exit_select" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonSelectClear"
+                style="@style/GeneralButton"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_clear_select" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonSelectAll"
+                style="@style/GeneralButton"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_select_all" />
+        </LinearLayout>
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:id="@+id/inventoryFooter3Options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_theme_color"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonSend"
+                style="@style/GeneralButton"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_send" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonDelete"
+                style="@style/GeneralButton"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_delete" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/itemListRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

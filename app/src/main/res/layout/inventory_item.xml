@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:minWidth="48dp"
+    android:layout_height="wrap_content"
+    android:minHeight="48dp"
+    android:orientation="horizontal"
+    android:paddingEnd="@dimen/inventory_item_element_spacing"
+    android:gravity="center_vertical"
+    android:background="@drawable/inventory_item_selector"
+    android:clickable="true"
+    android:focusable="true"
+    tools:ignore="RtlSymmetry">
+
+    <TextView
+        android:id="@+id/inventoryItemQuantity"
+        android:layout_width="wrap_content"
+        android:minWidth="20dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/inventory_item_element_spacing"
+        android:paddingEnd="@dimen/inventory_item_element_spacing"
+        android:gravity="start"
+        android:text="@string/quantity_placeholder"
+        android:textColor="@color/inventory_item_quantity"
+        android:textSize="@dimen/text" />
+
+    <TextView
+        android:id="@+id/inventoryItemName"
+        android:layout_width="0dp"
+        android:minWidth="20dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:text="@string/name_placeholder"
+        android:paddingEnd="@dimen/inventory_item_element_spacing"
+        android:textColor="@color/inventory_item_name"
+        android:textSize="@dimen/text" />
+
+    <TextView
+        android:id="@+id/inventoryItemTotalWeight"
+        android:layout_width="wrap_content"
+        android:minWidth="20dp"
+        android:layout_height="wrap_content"
+        android:text="@string/weight_placeholder"
+        android:paddingEnd="@dimen/inventory_item_element_spacing"
+        android:textColor="@color/inventory_item_weight"
+        android:textSize="@dimen/text" />
+
+    <LinearLayout
+        android:id="@+id/inventoryItemStepper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Decrement Button (-) -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/stepperDecrementButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="@string/stepper_decrement"
+            android:textSize="@dimen/text"
+            android:background="@color/inventory_stepper_decrement"
+            android:textColor="@color/inventory_stepper_sign"/>
+        <TextView
+            android:id="@+id/stepperQuantityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stepper_text"
+            android:paddingStart="@dimen/inventory_item_stepper_spacing"
+            android:paddingEnd="@dimen/inventory_item_stepper_spacing"
+            android:textColor="@color/inventory_stepper_text"
+            android:textSize="@dimen/text" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/stepperIncrementButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="@string/stepper_increment"
+            android:textSize="@dimen/text"
+            android:background="@color/inventory_stepper_increment"
+            android:textColor="@color/inventory_stepper_sign"/>
+    </LinearLayout>
+</LinearLayout>

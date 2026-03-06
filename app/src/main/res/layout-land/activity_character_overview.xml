@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1land">
+
+    <!-- Menu -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/rpg_top_bar_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/characterToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/rpg_top_bar_color"
+            android:elevation="4dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title=""
+            app:titleTextAppearance="@style/CustomMenuTextStyle" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <!-- Character Info -->
+    <TableLayout
+        android:id="@+id/characterOverviewInfoLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_max="640dp"
+        app:layout_constraintWidth_percent="0.45"
+        android:layout_marginStart="@dimen/activity_element_spacing_land"
+        android:layout_marginTop="@dimen/activity_element_spacing_land"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <!-- Name -->
+        <TableRow>
+            <TextView
+                style="@style/GeneralTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/character_overview_name" />
+
+            <TextView
+                android:id="@+id/characterOverviewName"
+                style="@style/GeneralTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/character_overview_name_temp"
+                tools:ignore="Autofill,LabelFor" />
+        </TableRow>
+        <!-- Strength -->
+        <TableRow>
+            <TextView
+                style="@style/GeneralTextField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/character_overview_strength" />
+            <TextView
+                android:id="@+id/characterOverviewStrength"
+                style="@style/GeneralTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/character_overview_strength_temp"
+                tools:ignore="Autofill,LabelFor" />
+        </TableRow>
+        <!-- Speed -->
+        <TableRow>
+            <TextView
+                style="@style/GeneralTextField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/character_overview_speed" />
+            <TextView
+                android:id="@+id/characterOverviewSpeed"
+                style="@style/GeneralTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/character_overview_speed_temp"
+                tools:ignore="Autofill,LabelFor" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/carryCapacityHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_max="640dp"
+        android:layout_marginStart="@dimen/activity_element_spacing_land"
+        android:layout_marginTop="@dimen/activity_element_spacing_land"
+        android:background="@color/Header"
+        android:gravity="center"
+        android:text="@string/character_overview_carrying_capacity"
+        android:textColor="@color/CoinText"
+        android:textSize="@dimen/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/characterOverviewInfoLayout"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <TableLayout
+        android:id="@+id/carryCapacity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_element_spacing_land"
+        android:background="@color/button_color"
+        app:layout_constraintWidth_max="640dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carryCapacityHeader"
+        app:layout_constraintWidth_percent="0.45">
+        <TableRow>
+            <TextView
+                style="@style/GeneralTextField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/character_overview_total_weight" />
+            <TextView
+                android:id="@+id/characterOverviewTotalWeight"
+                style="@style/GeneralTextField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/character_overview_total_weight_temp" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="@string/character_overview_limit1"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/characterOverviewLimit1Weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="@string/character_overview_limit_temp_weight"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="@string/character_overview_limit2"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/characterOverviewLimit2Weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="@string/character_overview_limit_temp_weight"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="@string/character_overview_limit3"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/characterOverviewLimit3Weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="@string/character_overview_limit_temp_weight"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+        </TableRow>
+    </TableLayout>
+
+
+    <!-- Inventory -->
+    <LinearLayout
+        android:id="@+id/inventoryHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintWidth_max="640dp"
+        android:layout_marginEnd="@dimen/activity_element_spacing_land"
+        android:layout_marginTop="@dimen/activity_element_spacing_land"
+        android:background="@color/Header"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/character_overview_backpack"
+            android:textColor="@color/CoinText"
+            android:textSize="@dimen/text" />
+
+    </LinearLayout>
+
+    <!-- BACKPACK -->
+    <FrameLayout
+        android:id="@+id/characterOverviewBackpackContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/activity_element_spacing_land"
+        android:layout_marginBottom="@dimen/activity_element_spacing_land"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/inventoryHeader"
+        app:layout_constraintTop_toBottomOf="@+id/inventoryHeader">
+        <ImageView
+            android:id="@+id/characterOverviewBackpack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:importantForAccessibility="no"
+            android:scaleType="fitCenter"
+            android:src="@drawable/backpack" />
+    </FrameLayout>
+
+
+
+    <!-- Fragment Container -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/characterFragmentContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

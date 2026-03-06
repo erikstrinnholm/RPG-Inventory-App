@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg1"
+    android:padding="@dimen/activity_element_spacing2">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/backButton"
+        style="@style/BackButtonStyle"
+        android:contentDescription="@string/character_selection_back_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        style="@style/GeneralTitle"
+        android:text="@string/character_create_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Field 1 -->
+    <EditText
+        android:id="@+id/createCharacterName"
+        style="@style/GeneralEditTextField"
+        android:layout_marginTop="@dimen/activity_element_spacing1"
+        android:hint="@string/character_create_name_hint"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:width="0dp"
+        app:layout_constraintWidth_max="320dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <!-- Field 2 -->
+    <EditText
+        android:id="@+id/createCharacterStrength"
+        style="@style/GeneralEditTextField"
+        android:layout_marginTop="@dimen/activity_element_spacing2"
+        android:hint="@string/character_create_strength_hint"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintWidth_max="320dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createCharacterName" />
+
+    <!-- Field 3 -->
+    <EditText
+        android:id="@+id/createCharacterSpeed"
+        style="@style/GeneralEditTextField"
+        android:layout_marginTop="@dimen/activity_element_spacing2"
+        android:hint="Character Speed"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintWidth_max="320dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createCharacterStrength" />
+
+    <EditText
+        android:id="@+id/createCharacterCampaign"
+        style="@style/GeneralEditTextField"
+        android:layout_marginTop="@dimen/activity_element_spacing2"
+        android:hint="@string/character_create_campaign_hint"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintWidth_max="320dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createCharacterSpeed" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/createCharacterButton"
+        style="@style/GeneralButton"
+        android:layout_marginTop="@dimen/activity_element_spacing2"
+        android:text="@string/character_create_button"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintWidth_max="320dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createCharacterCampaign" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    android:padding="16dp">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/backButton"
+        style="@style/BackButtonStyle"
+        android:contentDescription="@string/character_selection_back_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/selectCharacterTitle"
+        style="@style/GeneralTitle"
+        android:text="@string/character_selection_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- Button Container -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintWidth_max="320dp">
+
+        <!-- CharacterSlot1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/saveSlot1"
+                style="@style/GeneralButton"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="@string/character_selection_new" />
+            <ImageButton
+                android:id="@+id/deleteSaveSlot1"
+                style="@style/DeleteButtonStyle"
+                android:contentDescription="@string/character_selection_delete_description" />
+        </LinearLayout>
+
+        <!-- CharacterSlot2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:layout_marginTop="@dimen/activity_element_spacing2"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/saveSlot2"
+                style="@style/GeneralButton"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="@string/character_selection_new" />
+            <ImageButton
+                android:id="@+id/deleteSaveSlot2"
+                style="@style/DeleteButtonStyle"
+                android:contentDescription="@string/character_selection_delete_description" />
+        </LinearLayout>
+
+        <!-- CharacterSlot3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:layout_marginTop="@dimen/activity_element_spacing2"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/saveSlot3"
+                style="@style/GeneralButton"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="@string/character_selection_new" />
+            <ImageButton
+                android:id="@+id/deleteSaveSlot3"
+                style="@style/DeleteButtonStyle"
+                android:contentDescription="@string/character_selection_delete_description" />
+        </LinearLayout>
+
+        <!-- CharacterSlot4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:layout_marginTop="@dimen/activity_element_spacing2"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/saveSlot4"
+                style="@style/GeneralButton"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="@string/character_selection_new" />
+            <ImageButton
+                android:id="@+id/deleteSaveSlot4"
+                style="@style/DeleteButtonStyle"
+                android:contentDescription="@string/character_selection_delete_description" />
+        </LinearLayout>
+
+        <!-- CharacterSlot5 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:layout_marginTop="@dimen/activity_element_spacing2"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/saveSlot5"
+                style="@style/GeneralButton"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="@string/character_selection_new" />
+            <ImageButton
+                android:id="@+id/deleteSaveSlot5"
+                style="@style/DeleteButtonStyle"
+                android:contentDescription="@string/character_selection_delete_description" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Toggle Delete Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/toggleDeleteButton"
+        style="@style/GeneralButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
