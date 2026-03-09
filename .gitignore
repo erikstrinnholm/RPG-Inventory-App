@@ -1,49 +1,20 @@
 # === MAC ===================
 .DS_Store
 
-
-# === GRADLE ================
-.gradle/
-build/
-
-
 # === Android Studio ========
 .idea/
 *.iml
-
-
-# === Local Machine config ===
 local.properties
-
-
-# === Native build ===========
 .externalNativeBuild
 .cxx
-
-
-# === Generated files ========
 /captures
-
-
-# === APK / build ============
+.gradle/
+build/
 *.apk
 *.aab
 
-
-
-# ===== THESE FILES ARE NEEDED MINIMUM ===
-# app/src
-# app/build.gradle.kts
-# gradle/
-# gradlew
-# gradlew.bat
-# settings.gradle.kts
-# build.gradle.kts
-# gradle.properties
-# AndroidManifest.xml
-# res/
-# java/
-# kotlin/
+# ====== OTHER ==========
+Release/
 
 
 
