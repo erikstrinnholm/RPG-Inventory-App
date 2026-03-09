@@ -25,25 +25,25 @@
 <img src="Media/4.1 OverviewCharacter.png" width="300" />
 
 ### Inventory Screen
-See Saved Items
+#### See Saved Items
 <p float="left">
   <img src="Media/Inventory.png" width="300" />
   <img src="Media/InventoryEntry.png" width="300" />
 </p>
 
-Search Items
+#### Search Items
 <img src="Media/InventorySearch.png" width="300" />
 
-Sort Items
+#### Sort Items
 <img src="Media/InventorySorted.png" width="300" />
 
-Select Items
+#### Select Items
 <p float="left">
   <img src="Media/InventorySelectMode.png" width="300" />
   <img src="Media/InventorySelectMultiple.png" width="300" />
 </p>
 
-### Create Item Screen
+#### Create Item Screen
 <p float="left">
   <img src="Media/CreateItem.png" width="300" />
   <img src="Media/CreateItemEntry.png" width="300" />
